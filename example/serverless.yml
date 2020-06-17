@@ -1,0 +1,12 @@
+component: layer@dev
+name: layerDemo
+org: orgDemo
+app: appDemo
+stage: dev
+
+inputs:
+  region: ap-guangzhou
+  name: ${name}
+  src: ./layer-folder
+  runtimes:
+    - Nodejs10.15

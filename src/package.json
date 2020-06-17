@@ -1,0 +1,10 @@
+{
+  "name": "@serverless/layer",
+  "main": "serverless.js",
+  "author": "Tencent Cloud, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "tencent-component-toolkit": "^1.11.4",
+    "type": "^2.0.0"
+  }
+}
