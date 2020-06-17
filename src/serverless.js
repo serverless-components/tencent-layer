@@ -50,12 +50,12 @@ class ServerlessComponent extends Component {
   }
 
   async remove() {
-    const { layerName } = this.state
-    if (!layerName) {
-      console.log(`${CONFIGS.compFullname} ${layerName} not exist`)
+    const { name } = this.state
+    if (!name) {
+      console.log(`${CONFIGS.compFullname} ${name} not exist`)
       return {}
     }
-    console.log(`Removing ${CONFIGS.compFullname} ${layerName}...`)
+    console.log(`Removing ${CONFIGS.compFullname} ${name}...`)
 
     // get tencent cloud credentials
     const credentials = this.getCredentials()
