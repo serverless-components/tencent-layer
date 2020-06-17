@@ -32,18 +32,21 @@ $ touch serverless.yml
 
 ```yml
 # serverless.yml
-MyLayer:
-  component: '@serverless/tencent-layer'
-  inputs:
-    region: ap-guangzhou
-    name: test
-    src: ./node_modules
-    runtimes:
-      - Nodejs8.9
-    description: test project layer
+component: layer
+name: layerDemo
+org: orgDemo
+app: appDemo
+stage: dev
+
+inputs:
+  region: ap-guangzhou
+  name: layerDemo
+  src: ./layer-folder
+  runtimes:
+    - Nodejs10.15
 ```
 
-- [更多配置](https://github.com/serverless-components/tencent-layer/tree/master/docs/configure.md)
+- [更多配置](./docs/configure.md)
 
 ### 3. 部署
 
@@ -52,32 +55,7 @@ MyLayer:
 通过 `sls` 命令进行部署，并可以添加 `--debug` 参数查看部署过程中的信息
 
 ```bash
-$ sls --debug
-
-  DEBUG ─ Resolving the template's static variables.
-  DEBUG ─ Collecting components from the template.
-  DEBUG ─ Downloading any NPM components found in the template.
-  DEBUG ─ Analyzing the template's components dependencies.
-  DEBUG ─ Creating the template's components graph.
-  DEBUG ─ Syncing template state.
-  DEBUG ─ Executing the template's components graph.
-  DEBUG ─ Compressing layer test file to /Users/yugasun/Desktop/Develop/serverless/tencent-layer/example/.serverless/test-layer.zip.
-  DEBUG ─ Compressed layer test file successful
-  DEBUG ─ Uploading layer package to cos[sls-cloudlayer-ap-guangzhou-layer]. sls-cloudlayer-test-1583823859.zip
-  DEBUG ─ Creating layer test
-  DEBUG ─ Created layer: test, version: 7 successful
-
-  MyLayer:
-    region:      ap-guangzhou
-    name:        test
-    description: test project layer
-    runtimes:
-      - Nodejs8.9
-    licenseInfo:
-    hash:        d41cdf04bd33315be0d87e8562de9dd8
-    version:     7
-
-  12s › MyLayer › done
+$ sls deploy
 ```
 
 > 注意: `sls` 是 `serverless` 命令的简写。
@@ -87,13 +65,7 @@ $ sls --debug
 通过以下命令移除部署的 API 网关
 
 ```bash
-$ sls remove --debug
-
-  DEBUG ─ Flushing template state and removing all components.
-  DEBUG ─ Start removing layer: test, version: 7...
-  DEBUG ─ Remove layer: test, version: 7 successfully
-
-  6s › MyLayer › done
+$ sls remove
 ```
 
 ### 5. 账号配置（可选）

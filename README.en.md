@@ -45,48 +45,26 @@ TENCENT_SECRET_KEY=XXX
 
 ```yml
 # serverless.yml
-MyLayer:
-  component: '@serverless/tencent-layer'
-  inputs:
-    region: ap-guangzhou
-    name: test
-    src: ./node_modules
-    runtimes:
-      - Nodejs8.9
-    description: test project layer
+component: layer
+name: layerDemo
+org: orgDemo
+app: appDemo
+stage: dev
+
+inputs:
+  region: ap-guangzhou
+  name: layerDemo
+  src: ./layer-folder
+  runtimes:
+    - Nodejs10.15
 ```
 
-- [More Options](https://github.com/serverless-components/tencent-layer/blob/master/docs/configure.md)
+- [More Options](./docs/configure.md)
 
 ### 4. Deploy
 
 ```bash
-$ sls --debug
-
-  DEBUG ─ Resolving the template's static variables.
-  DEBUG ─ Collecting components from the template.
-  DEBUG ─ Downloading any NPM components found in the template.
-  DEBUG ─ Analyzing the template's components dependencies.
-  DEBUG ─ Creating the template's components graph.
-  DEBUG ─ Syncing template state.
-  DEBUG ─ Executing the template's components graph.
-  DEBUG ─ Compressing layer test file to /Users/yugasun/Desktop/Develop/serverless/tencent-layer/example/.serverless/test-layer.zip.
-  DEBUG ─ Compressed layer test file successful
-  DEBUG ─ Uploading layer package to cos[sls-cloudlayer-ap-guangzhou-layer]. sls-cloudlayer-test-1583823859.zip
-  DEBUG ─ Creating layer test
-  DEBUG ─ Created layer: test, version: 7 successful
-
-  MyLayer:
-    region:      ap-guangzhou
-    name:        test
-    description: test project layer
-    runtimes:
-      - Nodejs8.9
-    licenseInfo:
-    hash:        d41cdf04bd33315be0d87e8562de9dd8
-    version:     7
-
-  12s › MyLayer › done
+$ sls deploy
 ```
 
 > Notice: `sls` is short for `serverless` command.
@@ -96,13 +74,7 @@ $ sls --debug
 ### 5. Remove
 
 ```bash
-$ sls remove --debug
-
-  DEBUG ─ Flushing template state and removing all components.
-  DEBUG ─ Start removing layer: test, version: 7...
-  DEBUG ─ Remove layer: test, version: 7 successfully
-
-  6s › MyLayer › done
+$ sls remove
 ```
 
 ### More Components
