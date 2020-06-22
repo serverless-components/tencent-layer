@@ -34,7 +34,7 @@ const uploadCodeToCos = async (instance, appId, credentials, inputs, region) => 
   if (!inputs.code.bucket || !inputs.code.object) {
     const zipPath = inputs.code.src
     if (!zipPath) {
-      throw new TypeError('PARAMETER_LAYER', 'Parameter inputs.src is required.')
+      throw new TypeError('PARAMETER_LAYER_UPLOADCODETOCOS', 'Parameter inputs.src is required.')
     }
     console.log(`Code zip path ${zipPath}`)
 

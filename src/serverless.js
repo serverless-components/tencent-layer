@@ -9,8 +9,9 @@ class ServerlessComponent extends Component {
     const { tmpSecrets } = this.credentials.tencent
 
     if (!tmpSecrets || !tmpSecrets.TmpSecretId) {
-      throw new Error(
-        'Cannot get secretId/Key, your account could be sub-account or does not have access, please check if SLS_QcsRole role exists in your account, and visit https://console.cloud.tencent.com/cam to bind this role to your account.'
+      throw new TypeError(
+        'CREDENTIAL',
+        'Cannot get secretId/Key, your account could be sub-account and does not have the access to use SLS_QcsRole, please make sure the role exists first, then visit https://cloud.tencent.com/document/product/1154/43006, follow the instructions to bind the role to your account.'
       )
     }
 
@@ -37,7 +38,7 @@ class ServerlessComponent extends Component {
     try {
       layerInputs = await prepareInputs(this, credentials, appId, inputs)
     } catch (e) {
-      throw new TypeError('PARAMETER_LAYER', e.message, e.stack)
+      throw new TypeError('PARAMETER_LAYER_DEPLOY', e.message, e.stack)
     }
 
     inputs.oldState = this.state
