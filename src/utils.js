@@ -106,7 +106,7 @@ const prepareInputs = async (instance, credentials, appId, inputs = {}) => {
     name:
       ensureString(inputs.name, { isOptional: true }) ||
       instance.state.name ||
-      `${CONFIGS.framework}_component_${generateId()}`,
+      `${CONFIGS.compName}_component_${generateId()}`,
     runtimes: ensureIterable(inputs.runtimes, {
       default: CONFIGS.runtimes
     }),
