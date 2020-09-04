@@ -1,10 +1,10 @@
 name: layer
-version: 0.0.3
-author: Tencent Cloud, Inc
-org: Tencent Cloud, Inc
+version: 0.0.4
+author: 'Tencent Cloud, Inc'
+org: 'Tencent Cloud, Inc'
 description: Easily publish code to Tencent Layer.
-keywords: tencent, serverless, layer
-repo: https://github.com/serverless-components/tencent-layer
-readme: https://github.com/serverless-components/tencent-layer/tree/master/README.md
+keywords: 'tencent, serverless, layer'
+repo: 'https://github.com/serverless-components/tencent-layer'
+readme: 'https://github.com/serverless-components/tencent-layer/tree/master/README.md'
 license: MIT
 main: ./src
