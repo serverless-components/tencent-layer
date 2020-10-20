@@ -1,3 +1,10 @@
+## [0.0.6](https://github.com/serverless-components/tencent-layer/compare/v0.0.5...v0.0.6) (2020-10-20)
+
+
+### Bug Fixes
+
+* update deps ([a0cb6d0](https://github.com/serverless-components/tencent-layer/commit/a0cb6d0f201cd859477d0406be6f665e40be6736))
+
 ## [0.0.5](https://github.com/serverless-components/tencent-layer/compare/v0.0.4...v0.0.5) (2020-09-24)
 
 
