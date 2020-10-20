@@ -1,7 +1,5 @@
 # 腾讯云 Layer 组件
 
-简体中文 | [English](./README.en.md)
-
 ## 简介
 
 腾讯云 Layer 组件。
@@ -88,6 +86,12 @@ TENCENT_SECRET_ID=123
 TENCENT_SECRET_KEY=123
 ```
 
-### 更多组件
+## 更多组件
 
 可以在 [Serverless Components](https://github.com/serverless/components) repo 中查询更多组件的信息。
+
+## License
+
+MIT License
+
+Copyright (c) 2020 Tencent Cloud, Inc.

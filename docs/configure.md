@@ -17,6 +17,7 @@ inputs:
   src: ./node_modules
   # src:
   #   src: ./node_modules
+  #   targetDir: /node_modules
   #   exclude:   # 被排除的文件或目录
   #     - .env
   #     - node_modules
