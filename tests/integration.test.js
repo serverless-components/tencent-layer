@@ -11,7 +11,7 @@ jest.setTimeout(600000)
 const instanceYaml = {
   org: 'orgDemo',
   app: 'appDemo',
-  component: 'layer',
+  component: 'layer@dev',
   name: `layer-integration-tests-${generateId()}`,
   stage: 'dev',
   inputs: {
