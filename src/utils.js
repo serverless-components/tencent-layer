@@ -100,7 +100,9 @@ const capitalString = (str) => {
 const prepareInputs = async (instance, credentials, appId, inputs = {}) => {
   const layerInputs = {
     code: {
-      src: inputs.src
+      src: inputs.src,
+      bucket: inputs.srcOriginal && inputs.srcOriginal.bucket,
+      object: inputs.srcOriginal && inputs.srcOriginal.object
     },
     region: inputs.region || CONFIGS.region,
     name:
