@@ -1,3 +1,10 @@
+## [0.0.7](https://github.com/serverless-components/tencent-layer/compare/v0.0.6...v0.0.7) (2020-11-27)
+
+
+### Bug Fixes
+
+* deploy by bucket and object bug ([5e9bf93](https://github.com/serverless-components/tencent-layer/commit/5e9bf93a49725462fcbcd2d58cd74fb64583c8f6))
+
 ## [0.0.6](https://github.com/serverless-components/tencent-layer/compare/v0.0.5...v0.0.6) (2020-10-20)
 
 
