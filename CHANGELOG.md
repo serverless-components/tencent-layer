@@ -1,3 +1,10 @@
+## [0.0.8](https://github.com/serverless-components/tencent-layer/compare/v0.0.7...v0.0.8) (2020-12-11)
+
+
+### Bug Fixes
+
+* optimize timeout message ([5d84f0a](https://github.com/serverless-components/tencent-layer/commit/5d84f0a6979976cdb3333fb31036dfa01ecd5062))
+
 ## [0.0.7](https://github.com/serverless-components/tencent-layer/compare/v0.0.6...v0.0.7) (2020-11-27)
 
 
