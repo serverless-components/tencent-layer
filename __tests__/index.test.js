@@ -2,12 +2,8 @@ const path = require('path')
 require('dotenv').config({
   path: path.join(__dirname, '..', '.env.test')
 })
-const { generateId, getServerlessSdk } = require('./utils')
+const { generateId, getServerlessSdk } = require('./lib/utils')
 
-// set enough timeout for deployment to finish
-jest.setTimeout(600000)
-
-// the yaml file we're testing against
 const instanceYaml = {
   org: 'orgDemo',
   app: 'appDemo',
@@ -28,7 +24,6 @@ const credentials = {
   }
 }
 
-// get serverless construct sdk
 const sdk = getServerlessSdk(instanceYaml.org)
 
 it('should successfully deploy layer service', async () => {
