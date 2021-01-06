@@ -1,7 +1,4 @@
 const path = require('path')
-require('dotenv').config({
-  path: path.join(__dirname, '..', '.env.test')
-})
 const { generateId, getServerlessSdk } = require('./lib/utils')
 
 const instanceYaml = {
@@ -26,7 +23,7 @@ const credentials = {
 
 const sdk = getServerlessSdk(instanceYaml.org)
 
-it('should successfully deploy layer service', async () => {
+it('deploy layer', async () => {
   const instance = await sdk.deploy(instanceYaml, credentials)
 
   expect(instance).toBeDefined()
@@ -38,7 +35,7 @@ it('should successfully deploy layer service', async () => {
   expect(instance.outputs.runtimes[0]).toEqual(instanceYaml.inputs.runtimes[0])
 })
 
-it('should successfully remove layer service', async () => {
+it('remove layer', async () => {
   await sdk.remove(instanceYaml, credentials)
   result = await sdk.getInstance(
     instanceYaml.org,

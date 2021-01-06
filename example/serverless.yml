@@ -1,8 +1,9 @@
-component: layer
-name: layerDemo
 org: orgDemo
 app: appDemo
 stage: dev
+
+component: layer
+name: layerDemo
 
 inputs:
   region: ap-guangzhou

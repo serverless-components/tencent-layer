@@ -1,7 +1,5 @@
 const { Cos } = require('tencent-component-toolkit')
 const { TypeError } = require('tencent-component-toolkit/src/utils/error')
-const ensureIterable = require('type/iterable/ensure')
-const ensureString = require('type/string/ensure')
 const CONFIGS = require('./config')
 
 /*
@@ -18,6 +16,14 @@ const generateId = () =>
   Math.random()
     .toString(36)
     .substring(6)
+
+const removeAppid = (str, appid) => {
+  const suffix = `-${appid}`
+  if (!str || str.indexOf(suffix) === -1) {
+    return str
+  }
+  return str.slice(0, -suffix.length)
+}
 
 /**
  * Upload code to COS
@@ -101,20 +107,13 @@ const prepareInputs = async (instance, credentials, appId, inputs = {}) => {
   const layerInputs = {
     code: {
       src: inputs.src,
-      bucket: inputs.srcOriginal && inputs.srcOriginal.bucket,
+      bucket: removeAppid(inputs.srcOriginal && inputs.srcOriginal.bucket, appId),
       object: inputs.srcOriginal && inputs.srcOriginal.object
     },
     region: inputs.region || CONFIGS.region,
-    name:
-      ensureString(inputs.name, { isOptional: true }) ||
-      instance.state.name ||
-      `${CONFIGS.compName}_component_${generateId()}`,
-    runtimes: ensureIterable(inputs.runtimes, {
-      default: CONFIGS.runtimes
-    }),
-    description: ensureString(inputs.description, {
-      default: CONFIGS.description
-    })
+    name: inputs.name || instance.state.name || `${CONFIGS.compName}_component_${generateId()}`,
+    runtimes: inputs.runtimes || CONFIGS.runtimes,
+    description: inputs.description || CONFIGS.description
   }
 
   const { bucket, object } = await uploadCodeToCos(

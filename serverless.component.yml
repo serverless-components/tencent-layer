@@ -1,5 +1,5 @@
 name: layer
-version: 0.1.0
+version: 0.1.1
 author: 'Tencent Cloud, Inc'
 org: 'Tencent Cloud, Inc'
 description: Easily publish code to Tencent Layer.
@@ -8,3 +8,54 @@ repo: 'https://github.com/serverless-components/tencent-layer'
 readme: 'https://github.com/serverless-components/tencent-layer/tree/master/README.md'
 license: MIT
 main: ./src
+
+actions:
+  deploy:
+    definition: Deploy a layer
+    inputs:
+      src:
+        type: src
+        required: true
+        description: The folder containing the source code of layer
+      description:
+        type: string
+      name:
+        type: string
+        description: The name of layer
+        regex: '^[A-Za-z][\w-_]{0,58}[A-Za-z0-9]$'
+      runtimes:
+        type: array
+        description: Layer support runtimes
+        required: true
+        items:
+          - type: string
+            allow:
+              - Python2.7
+              - Python3.6
+              - Nodejs6.10
+              - Nodejs8.9
+              - Nodejs10.15
+              - Nodejs12.16
+              - Php5
+              - Php7
+              - Go1
+              - Java8
+              - CustomRuntime
+      region:
+        type: string
+        default: ap-guangzhou
+        description: Region for layer deployed to
+        allow:
+          - ap-guangzhou
+          - ap-shanghai
+          - ap-hongkong
+          - ap-beijing
+          - ap-chengdu
+          - ap-tokyo
+          - ap-mumbai
+          - ap-singapore
+          - na-siliconvalley
+          - na-toronto
+
+  remove:
+    definition: Remove layer
