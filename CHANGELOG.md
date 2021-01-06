@@ -1,3 +1,10 @@
+## [0.0.9](https://github.com/serverless-components/tencent-layer/compare/v0.0.8...v0.0.9) (2021-01-06)
+
+
+### Bug Fixes
+
+* support bucket with appid ([5fc8197](https://github.com/serverless-components/tencent-layer/commit/5fc81979494acfd97056a1862e11e062ce5ede5a))
+
 ## [0.0.8](https://github.com/serverless-components/tencent-layer/compare/v0.0.7...v0.0.8) (2020-12-11)
 
 
