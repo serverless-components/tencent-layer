@@ -1,5 +1,5 @@
 name: layer
-version: 0.1.1
+version: 0.1.2
 author: 'Tencent Cloud, Inc'
 org: 'Tencent Cloud, Inc'
 description: Easily publish code to Tencent Layer.
@@ -26,7 +26,6 @@ actions:
       runtimes:
         type: array
         description: Layer support runtimes
-        required: true
         items:
           - type: string
             allow:
