@@ -1,3 +1,10 @@
+## [0.0.10](https://github.com/serverless-components/tencent-layer/compare/v0.0.9...v0.0.10) (2021-04-19)
+
+
+### Bug Fixes
+
+* remove region limitation ([58f3c2c](https://github.com/serverless-components/tencent-layer/commit/58f3c2c4abce8bdd4dcbe77a9b2e1ad4c6c93f97))
+
 ## [0.0.9](https://github.com/serverless-components/tencent-layer/compare/v0.0.8...v0.0.9) (2021-01-06)
 
 
