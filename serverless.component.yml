@@ -1,5 +1,5 @@
 name: layer
-version: 0.1.5
+version: 0.1.6
 author: 'Tencent Cloud, Inc'
 org: 'Tencent Cloud, Inc'
 description: Layer 组件，允许用户创建部署云函数 SCF 的层内容。 配置其他组件减少部署的代码包体积。
@@ -35,6 +35,8 @@ actions:
               - Nodejs8.9
               - Nodejs10.15
               - Nodejs12.16
+              - Nodejs14.18
+              - Nodejs16.13
               - Php5
               - Php7
               - Go1
