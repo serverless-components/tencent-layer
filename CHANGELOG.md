@@ -1,3 +1,10 @@
+## [0.0.11](https://github.com/serverless-components/tencent-layer/compare/v0.0.10...v0.0.11) (2022-02-21)
+
+
+### Bug Fixes
+
+* 增加node版本 ([#9](https://github.com/serverless-components/tencent-layer/issues/9)) ([e4ef02b](https://github.com/serverless-components/tencent-layer/commit/e4ef02b858de98a550306211d3af98eaa52544d5))
+
 ## [0.0.10](https://github.com/serverless-components/tencent-layer/compare/v0.0.9...v0.0.10) (2021-04-19)
 
 
