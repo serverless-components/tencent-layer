@@ -1,3 +1,10 @@
+## [0.0.12](https://github.com/serverless-components/tencent-layer/compare/v0.0.11...v0.0.12) (2022-03-17)
+
+
+### Bug Fixes
+
+* 修改runtime规则 ([ccc344d](https://github.com/serverless-components/tencent-layer/commit/ccc344dc7d4463e466aa8f3870902da1bb5570df))
+
 ## [0.0.11](https://github.com/serverless-components/tencent-layer/compare/v0.0.10...v0.0.11) (2022-02-21)
 
 
